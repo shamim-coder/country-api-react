@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Country from "../Country/Country.js";
+import { v4 as uuidv4 } from "uuid";
 
 const gridStyle = {
     display: "grid",
@@ -17,10 +18,10 @@ const Countries = () => {
     console.log(countries);
     return (
         <div className="all-countries">
-            <p>{countries.length}</p>
+            <p>All Available Countries: {countries.length}</p>
             <div style={gridStyle} className="country-container">
                 {countries.map((country) => (
-                    <Country key={Math.random() * 500000} country={country}></Country>
+                    <Country key={uuidv4()} country={country}></Country>
                 ))}
             </div>
         </div>
