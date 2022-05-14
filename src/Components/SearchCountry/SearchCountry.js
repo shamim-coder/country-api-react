@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const SearchCountry = () => {
     const [country, setCountry] = useState([]);
-    const [text, setText] = useState("");
+    const [text, setText] = useState("bangladesh");
     useEffect(() => {
         const API = `https://restcountries.com/v3.1/name/${text}`;
         fetch(API)
